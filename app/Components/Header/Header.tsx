@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Styles from "./Header.module.css";
 import Headerlinks from "./Header-links";
-
+import Button from "../Button/Button";
 const Header = () => {
     return (
-        <header className={Styles.header}>
+        <div className={Styles.header}>
             <div className={`${Styles.wrapper} ${Styles.cont}`}>
                 <div className={Styles.container}>
                     <Image src={'header-img.svg'} alt="header" width={59} height={59} />
@@ -14,15 +14,15 @@ const Header = () => {
                     </div>
                 </div>
                 <div className={Styles.links}>
-                    <Headerlinks name='Home' border="none" />
-                    <Headerlinks name='Visit' border="none" />
-                    <Headerlinks name='Exhibitions' border="none" />
-                    <Headerlinks name='Programs & Events' border="none" />
-                    <Headerlinks name='Store' border="none" />
-                    <Headerlinks btn='Membership' border="2px solid var(--Primary, #475F45)" />
+                    <Headerlinks name='Home' />
+                    <Headerlinks name='Visit'  />
+                    <Headerlinks name='Exhibitions' />
+                    <Headerlinks name='Programs & Events'  />
+                    <Headerlinks name='Store' />
+                    <Button name="Membership"/>
                 </div>
             </div>
-        </header>
+        </div>
 
     )
 }
